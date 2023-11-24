@@ -1,0 +1,35 @@
+// Import the globals.scss file in the app folder
+@import '../../app/globals.scss';
+
+.navigation {
+    align-items: center;
+    background-color: $ll;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding: 0px 25px;
+    width: 100%;
+    z-index: 100;
+}
+
+.navBarBrand    {
+    align-items: center;
+    display: flex;
+    font-family: 'Lato';
+    font-weight: bold;
+    gap: 10px;
+    justify-content: center;
+
+    p   {
+        margin: 0px;
+    }
+}
+
+.navImage   {
+    width: 50px;
+}
+
+.navLink   {
+    font-family: 'Lato';
+    font-weight: bold;
+}
