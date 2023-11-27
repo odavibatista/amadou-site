@@ -8,6 +8,7 @@ import Header from '@/components/header';
 import Container from '@/components/container';
 import Carousel from '@/components/carousel';
 import IndexHero from '@/components/indexHero';
+import Footer from '@/components/footer';
 
 export default function Home() {
   useEffect(()  =>  {
@@ -23,6 +24,7 @@ export default function Home() {
         <IndexHero/>
         <Carousel/>
       </Container>
+      <Footer/>
       <ChangeLanguage />
     </main>
   )

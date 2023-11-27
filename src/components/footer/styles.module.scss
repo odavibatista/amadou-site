@@ -1,14 +1,13 @@
 @import '../../app/globals.scss';
 
-.navigation {
+.footer {
     align-items: center;
     background-color: $ll;
     display: flex;
-    height: 60px;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 0px 25px;
-    width: 100%;
-    z-index: 100;
+    padding: 10px 25px;
+    width: 100vw;
 }
 
 .navBarBrand    {
@@ -24,8 +23,9 @@
     }
 }
 
-.navImage   {
-    width: 50px;
+.links  {
+    display: flex;
+    flex-direction: row;
 }
 
 .navLink   {

@@ -1,7 +1,14 @@
+@import '../../app/globals.scss';
 
 .container {
     align-items: center;
+    background-color: $lg;
     display: flex;
     flex-direction: column;
     padding: 20px 80px;
+    width: 100vw;
+
+    img {
+        max-width: 1000px;
+    }
 }
