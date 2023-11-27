@@ -12,7 +12,7 @@ export default function Header() {
             <Link className={styles.navBarBrand + " navbar-brand"} href={'/'}>
                 <img src="/gambia.png" alt="" className={styles.navImage + " navImage"} />
                 <p>
-                    Amadou Bah
+                    {portuguese === true ? "Site do Amadou" : "Amadou's Site"}
                 </p>
             </Link>
             <button
@@ -34,6 +34,9 @@ export default function Header() {
                     </li>
                     <li className="nav-item">
                         <Link className={styles.navLink + " nav-link"}  href={'/about'}>{portuguese === true ? "Sobre" : "About"}</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className={styles.navLink + " nav-link"}  href={'/help'}>{portuguese === true ? "Ajudar" : "Help"}</Link>
                     </li>
                 </ul>
             </div>

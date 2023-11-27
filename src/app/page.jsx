@@ -5,6 +5,9 @@ import ChangeLanguage from '@/components/changeLanguage'
 import "bootstrap/dist/js/bootstrap.min.js";
 import { useEffect } from 'react'
 import Header from '@/components/header';
+import Container from '@/components/container';
+import Carousel from '@/components/carousel';
+import IndexHero from '@/components/indexHero';
 
 export default function Home() {
   useEffect(()  =>  {
@@ -16,6 +19,10 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Header />
+      <Container>
+        <IndexHero/>
+        <Carousel/>
+      </Container>
       <ChangeLanguage />
     </main>
   )

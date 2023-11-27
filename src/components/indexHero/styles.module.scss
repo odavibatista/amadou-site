@@ -1,0 +1,18 @@
+@import '../../app/globals.scss';
+
+.div    {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.h1 {
+    color: $dle;
+    font-weight: bold;
+}
+
+.p  {
+    color: $lm;
+    font-family: 'Lato';
+    font-weight: bold;
+}

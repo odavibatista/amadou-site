@@ -1,11 +1,9 @@
 .btn    {
+    position: fixed;
     bottom: 0;
-    cursor: pointer;
-    position: absolute;
     left: 0;
-    padding: 4px;
-    width: 50px;
-    transition: all 0.3s ease-in-out;
+    margin: 20px;
+    width: 40px;
     &:hover {
         filter: brightness(1.2);
     }
