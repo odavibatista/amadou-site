@@ -12,8 +12,8 @@ export default function About() {
             <Header/>
             <Container>
             </Container>
-            <Footer/>
             <ChangeLanguage />
+            <Footer/>
         </main>
     )
 }

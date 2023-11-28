@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './styles.module.scss';
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function ChangeLanguage()    {
     let portuguese
@@ -11,12 +11,13 @@ export default function ChangeLanguage()    {
     )
 
     function alterLanguage () {
+        portuguese = JSON.parse(localStorage.getItem('portuguese'))
         if (portuguese === true) {
             localStorage.setItem('portuguese', false)
             } else {
                 localStorage.setItem('portuguese', true)
         }
-    
+
         setTimeout(() => {
             window.location.reload()
         }, 500)
@@ -24,7 +25,7 @@ export default function ChangeLanguage()    {
 
     return (
         <div onClick={alterLanguage}>
-            <img src={`${portuguese === true ? "/br-flag.png" : "/us-flag.png"}`} alt=""  className={styles.btn} />
+            <img src={`${JSON.parse(localStorage.getItem('portuguese')) === true ? "/br-flag.png" : "/us-flag.png"}`} alt=""  className={styles.btn} />
         </div>
     )
 }

@@ -15,8 +15,8 @@ export default function About() {
             <Container>
                 <AboutHero/>
             </Container>
-            <Footer/>
             <ChangeLanguage />
+            <Footer/>
         </main>
     )
 }
