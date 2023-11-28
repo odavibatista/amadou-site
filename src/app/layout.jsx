@@ -1,4 +1,3 @@
-
 import { Inter } from 'next/font/google'
 import "bootstrap/dist/css/bootstrap.min.css";
 

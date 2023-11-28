@@ -1,9 +1,14 @@
 'use client'
 
 import styles from './styles.module.scss';
+import { useEffect } from 'react'
 
 export default function AboutHero() {
-    const portuguese = JSON.parse(localStorage.getItem('portuguese'))
+    let portuguese
+    useEffect(()  =>  {
+        portuguese = JSON.parse(localStorage.getItem('portuguese'))
+        }
+    )
 
     return(
         <section className={styles.section}>

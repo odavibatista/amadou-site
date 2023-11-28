@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import styles from './page.module.scss'
 import ChangeLanguage from '@/components/changeLanguage'
-import "bootstrap/dist/js/bootstrap.min.js";
 import { useEffect } from 'react'
 import Header from '@/components/header';
 import Container from '@/components/container';

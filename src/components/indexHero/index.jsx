@@ -1,7 +1,14 @@
+'use client'
+
 import styles from './styles.module.scss';
+import { useEffect } from 'react'
 
 export default function IndexHero() {
-    const portuguese = JSON.parse(localStorage.getItem('portuguese'))
+    let portuguese
+    useEffect(()  =>  {
+        portuguese = JSON.parse(localStorage.getItem('portuguese'))
+        }
+    )
 
     return (
         <div className={styles.div}>

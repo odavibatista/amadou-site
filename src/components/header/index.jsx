@@ -3,9 +3,14 @@
 import Image from 'next/image'
 import styles from './styles.module.scss'
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 export default function Header() {
-    const portuguese = JSON.parse(localStorage.getItem('portuguese'))
+    let portuguese
+    useEffect(()  =>  {
+        portuguese = JSON.parse(localStorage.getItem('portuguese'))
+        }
+    )
 
     return (
         <nav className={`${styles.navigation} + " navbar navbar-expand-lg container-fluid navigation sticky-top"`}>
