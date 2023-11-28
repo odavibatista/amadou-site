@@ -4,15 +4,20 @@ import styles from './styles.module.scss';
 import { useEffect, useState } from 'react'
 
 export default function ChangeLanguage()    {
-    let portuguese
-    useEffect(()  =>  {
-        portuguese = JSON.parse(localStorage.getItem('portuguese'))
-        }
-    )
+    function getLanguage() {
+        useEffect(()  =>  {
+            if (localStorage.getItem('portuguese') === null) {
+                localStorage.setItem('portuguese', true)
+            }
+            return JSON.parse(localStorage.getItem('portuguese'))
+        }, [])
+    }
+
+    const portuguese = getLanguage()
 
     function alterLanguage () {
-        portuguese = JSON.parse(localStorage.getItem('portuguese'))
-        if (portuguese === true) {
+        let pt = JSON.parse(localStorage.getItem('portuguese'))
+        if (pt === true) {
             localStorage.setItem('portuguese', false)
             } else {
                 localStorage.setItem('portuguese', true)
@@ -25,7 +30,7 @@ export default function ChangeLanguage()    {
 
     return (
         <div onClick={alterLanguage}>
-            <img src={`${JSON.parse(localStorage.getItem('portuguese')) === true ? "/br-flag.png" : "/us-flag.png"}`} alt=""  className={styles.btn} />
+            <img src={`${portuguese ? "/br-flag.png" : "/us-flag.png"}`} alt=""  className={styles.btn} />
         </div>
     )
 }

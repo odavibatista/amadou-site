@@ -15,13 +15,13 @@ export default function Footer() {
             <Link className={styles.navBarBrand + " navbar-brand"} href={'/'}>
                 <img src="/gambia.png" alt="" className={styles.navImage + " navImage"} />
                 <p>
-                    {JSON.parse(localStorage.getItem('portuguese')) === true ? "Site do Amadou" : "Amadou's Site"}
+                    {portuguese ? "Site do Amadou" : "Amadou's Site"}
                 </p>
             </Link>
             <div className={styles.links + " gap-5"}>
-                <Link className={styles.navLink + " nav-link"}  href={'/'}>{JSON.parse(localStorage.getItem('portuguese')) === true ? "Índice" : "Home"}</Link>
-                <Link className={styles.navLink + " nav-link"}  href={'/about'}>{JSON.parse(localStorage.getItem('portuguese')) === true ? "Sobre" : "About"}</Link>
-                <Link className={styles.navLink + " nav-link"}  href={'/help'}>{JSON.parse(localStorage.getItem('portuguese')) === true ? "Ajudar" : "Help"}</Link>
+                <Link className={styles.navLink + " nav-link"}  href={'/'}>{portuguese ? "Índice" : "Home"}</Link>
+                <Link className={styles.navLink + " nav-link"}  href={'/about'}>{portuguese ? "Sobre" : "About"}</Link>
+                <Link className={styles.navLink + " nav-link"}  href={'/help'}>{portuguese ? "Ajudar" : "Help"}</Link>
             </div>
         </section>
     )

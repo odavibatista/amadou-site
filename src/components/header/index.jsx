@@ -1,16 +1,27 @@
 'use client'
 
+import { useEffect } from 'react'
 import styles from './styles.module.scss'
 import Link from 'next/link'
 
 export default function Header() {
+    function getLanguage() {
+        useEffect(()  =>  {
+            if (localStorage.getItem('portuguese') === null) {
+                localStorage.setItem('portuguese', true)
+            }
+            return JSON.parse(localStorage.getItem('portuguese'))
+        }, [])
+    }
+
+    const portuguese = getLanguage()
 
     return (
         <nav className={`${styles.navigation} + " navbar navbar-expand-lg container-fluid navigation sticky-top"`}>
             <Link className={styles.navBarBrand + " navbar-brand"} href={'/'}>
                 <img src="/gambia.png" alt="" className={styles.navImage + " navImage"} />
                 <p>
-                    {JSON.parse(localStorage.getItem('portuguese')) === true ? "Site do Amadou" : "Amadou's Site"}
+                    {portuguese ? "Site do Amadou" : "Amadou's Site"}
                 </p>
             </Link>
             <button
@@ -28,13 +39,13 @@ export default function Header() {
             <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul className="navbar-nav gap-5">
                     <li className="nav-item">
-                        <Link className={styles.navLink + " nav-link"}  href={'/'}>{JSON.parse(localStorage.getItem('portuguese')) === true ? "Índice" : "Home"}</Link>
+                        <Link className={styles.navLink + " nav-link"}  href={'/'}>{portuguese ? "Índice" : "Home"}</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className={styles.navLink + " nav-link"}  href={'/about'}>{JSON.parse(localStorage.getItem('portuguese')) === true ? "Sobre" : "About"}</Link>
+                        <Link className={styles.navLink + " nav-link"}  href={'/about'}>{portuguese ? "Sobre" : "About"}</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className={styles.navLink + " nav-link"}  href={'/help'}>{JSON.parse(localStorage.getItem('portuguese')) === true ? "Ajudar" : "Help"}</Link>
+                        <Link className={styles.navLink + " nav-link"}  href={'/help'}>{portuguese ? "Ajudar" : "Help"}</Link>
                     </li>
                 </ul>
             </div>
