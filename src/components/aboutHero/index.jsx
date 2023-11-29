@@ -5,15 +5,16 @@ import { useEffect } from 'react'
 
 export default function AboutHero() {
     function getLanguage() {
-        if (typeof window !== 'undefined') {
+        useEffect(()  =>  {
             if (localStorage.getItem('portuguese') === null) {
                 localStorage.setItem('portuguese', true)
             }
             return JSON.parse(localStorage.getItem('portuguese'))
-        }
+        })
     }
 
     const portuguese = getLanguage()
+    
     return(
         <section className={styles.section}>
             <h1 className={styles.h1}>{JSON.parse(localStorage.getItem('portuguese')) === true ? "Sobre Amadou Jallow" : "About Amadou Jallow"}</h1>

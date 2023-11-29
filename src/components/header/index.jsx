@@ -6,12 +6,12 @@ import Link from 'next/link'
 
 export default function Header() {
     function getLanguage() {
-        if (typeof window !== 'undefined') {
+        useEffect(()  =>  {
             if (localStorage.getItem('portuguese') === null) {
                 localStorage.setItem('portuguese', true)
             }
             return JSON.parse(localStorage.getItem('portuguese'))
-        }
+        })
     }
 
     const portuguese = getLanguage()
