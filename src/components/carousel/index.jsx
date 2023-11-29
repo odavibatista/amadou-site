@@ -1,7 +1,12 @@
 'use client'
-import "bootstrap/dist/js/bootstrap.min.js";
+import { useEffect } from "react";
 
 export default function Carousel() {
+
+    useEffect(() => {
+      require("bootstrap/dist/js/bootstrap.bundle.min.js");
+    }, []);
+
     return(
         <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner">
