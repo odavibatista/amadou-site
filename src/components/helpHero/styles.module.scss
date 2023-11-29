@@ -1,0 +1,30 @@
+@import '../../app/globals.scss';
+
+.section    {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    min-height: 100vh;
+
+    p   {
+        font-family: 'Lato';
+        font-weight: bold;
+    }
+
+    a   {
+        color: $dle;
+        font-weight: bold;
+    }
+}
+
+.h1 {
+    color: $dle;
+    font-weight: bold;
+}
+
+.h2 {
+    color: $dle;
+    font-weight: bold;
+}

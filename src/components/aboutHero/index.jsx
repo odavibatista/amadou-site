@@ -5,13 +5,11 @@ import { useEffect } from 'react'
 
 export default function AboutHero() {
     function getLanguage() {
-        useEffect(()  =>  {
-            if (localStorage.getItem('portuguese') === null) {
-                localStorage.setItem('portuguese', true)
-            }
-            return JSON.parse(localStorage.getItem('portuguese'))
-        }, [])
-    }
+        if (localStorage.getItem('portuguese') === null) {
+            localStorage.setItem('portuguese', true)
+        }
+        return JSON.parse(localStorage.getItem('portuguese'))
+}
 
     const portuguese = getLanguage()
     return(

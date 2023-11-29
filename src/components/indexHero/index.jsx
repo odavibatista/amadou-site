@@ -5,13 +5,11 @@ import styles from './styles.module.scss';
 
 export default function IndexHero() {
     function getLanguage() {
-        useEffect(()  =>  {
-            if (localStorage.getItem('portuguese') === null) {
-                localStorage.setItem('portuguese', true)
-            }
-            return JSON.parse(localStorage.getItem('portuguese'))
-        }, [])
-    }
+        if (localStorage.getItem('portuguese') === null) {
+            localStorage.setItem('portuguese', true)
+        }
+        return JSON.parse(localStorage.getItem('portuguese'))
+}
 
     const portuguese = getLanguage()
     return (

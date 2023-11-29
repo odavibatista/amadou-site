@@ -4,11 +4,7 @@ import styles from './styles.module.scss';
 import { useEffect } from 'react'
 
 export default function Footer() {
-    let portuguese
-    useEffect(()  =>  {
-        portuguese = JSON.parse(localStorage.getItem('portuguese'))
-        }
-    )
+    let portuguese = JSON.parse(localStorage.getItem('portuguese'))
 
     return(
         <section className={styles.footer}>
