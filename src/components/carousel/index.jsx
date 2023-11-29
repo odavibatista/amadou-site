@@ -1,4 +1,5 @@
 'use client'
+import "bootstrap/dist/js/bootstrap.min.js";
 
 export default function Carousel() {
     return(
