@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    justify-content: center;
     text-align: center;
     min-height: 100vh;
 
@@ -16,6 +17,7 @@
     a   {
         color: $dle;
         font-weight: bold;
+        font-style: normal;
     }
 }
 
