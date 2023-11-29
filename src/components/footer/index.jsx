@@ -18,7 +18,7 @@ export default function Footer() {
                     {portuguese ? "Site do Amadou" : "Amadou's Site"}
                 </p>
             </Link>
-            <div className={styles.links + " gap-5"}>
+            <div className={styles.links}>
                 <Link className={styles.navLink + " nav-link"}  href={'/'}>{portuguese ? "Índice" : "Home"}</Link>
                 <Link className={styles.navLink + " nav-link"}  href={'/about'}>{portuguese ? "Sobre" : "About"}</Link>
                 <Link className={styles.navLink + " nav-link"}  href={'/help'}>{portuguese ? "Ajudar" : "Help"}</Link>
