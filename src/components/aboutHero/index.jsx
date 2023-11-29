@@ -12,7 +12,7 @@ export default function AboutHero() {
     
     return(
         <section className={styles.section}>
-            <h1 className={styles.h1}>{JSON.parse(localStorage.getItem('portuguese')) === true ? "Sobre Amadou Jallow" : "About Amadou Jallow"}</h1>
+            <h1 className={styles.h1}>{portuguese === true ? "Sobre Amadou Jallow" : "About Amadou Jallow"}</h1>
             <img src="https://4fund.com/uploads/chipin/6xkxxv/cover/orginal/ac892cf42dcb49efeaaefb2067ec914a.jpg" alt="Amadou" className='' />
             <p>
                 {portuguese ? "Amadou Jallow foi um jovem africano residente na Gâmbia que passava por necessidades financeiras. Amadou perdeu os seus pais ainda jovem, e desde então teve de assumir o cargo de ser o chefe da família, cuidando de seus irmãos mais novos e de sua avó." : 
