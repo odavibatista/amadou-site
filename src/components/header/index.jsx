@@ -5,16 +5,11 @@ import styles from './styles.module.scss'
 import Link from 'next/link'
 
 export default function Header() {
-    function getLanguage() {
-        useEffect(()  =>  {
-            if (localStorage.getItem('portuguese') === null) {
-                localStorage.setItem('portuguese', true)
-            }
-            return JSON.parse(localStorage.getItem('portuguese'))
-        })
-    }
-
-    const portuguese = getLanguage()
+    let portuguese
+    useEffect(()  =>  {
+        portuguese = JSON.parse(localStorage.getItem('portuguese'))
+        }
+    )
 
     return (
         <nav className={`${styles.navigation} + " navbar navbar-expand-lg container-fluid navigation sticky-top"`}>

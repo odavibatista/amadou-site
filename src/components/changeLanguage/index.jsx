@@ -4,16 +4,11 @@ import styles from './styles.module.scss';
 import { useEffect, useState } from 'react'
 
 export default function ChangeLanguage()    {
-    function getLanguage() {
-        useEffect(()  =>  {
-            if (localStorage.getItem('portuguese') === null) {
-                localStorage.setItem('portuguese', true)
-            }
-            return JSON.parse(localStorage.getItem('portuguese'))
-        })
-    }
-
-    const portuguese = getLanguage()
+    let portuguese
+    useEffect(()  =>  {
+        portuguese = JSON.parse(localStorage.getItem('portuguese'))
+        }
+    )
 
     function alterLanguage () {
         let pt = JSON.parse(localStorage.getItem('portuguese'))

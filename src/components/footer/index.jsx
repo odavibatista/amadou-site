@@ -4,16 +4,11 @@ import styles from './styles.module.scss';
 import { useEffect } from 'react'
 
 export default function Footer() {
-    function getLanguage() {
-        useEffect(()  =>  {
-            if (localStorage.getItem('portuguese') === null) {
-                localStorage.setItem('portuguese', true)
-            }
-            return JSON.parse(localStorage.getItem('portuguese'))
-        })
-    }
-
-    const portuguese = getLanguage()
+    let portuguese
+    useEffect(()  =>  {
+        portuguese = JSON.parse(localStorage.getItem('portuguese'))
+        }
+    )
 
     return(
         <section className={styles.footer}>
