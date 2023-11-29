@@ -5,13 +5,16 @@ import { useEffect } from 'react'
 
 export default function HelpHero() {
     function getLanguage() {
+        if (typeof window !== 'undefined') {
             if (localStorage.getItem('portuguese') === null) {
                 localStorage.setItem('portuguese', true)
             }
             return JSON.parse(localStorage.getItem('portuguese'))
+        }
     }
 
     const portuguese = getLanguage()
+    
     return(
         <section className={styles.section}>
             <h1 className={styles.h1}>{portuguese === true ? "Um dos apoiadores do Amadou está procurando um meio de ajudar a sua família após sua morte." : "One of Amadou's helpers is looking for a way to help his family after Amadou's death."}</h1>

@@ -5,13 +5,16 @@ import styles from './styles.module.scss';
 
 export default function IndexHero() {
     function getLanguage() {
-        if (localStorage.getItem('portuguese') === null) {
-            localStorage.setItem('portuguese', true)
+        if (typeof window !== 'undefined') {
+            if (localStorage.getItem('portuguese') === null) {
+                localStorage.setItem('portuguese', true)
+            }
+            return JSON.parse(localStorage.getItem('portuguese'))
         }
-        return JSON.parse(localStorage.getItem('portuguese'))
-}
+    }
 
     const portuguese = getLanguage()
+    
     return (
         <div className={styles.div}>
             <h1 className={styles.h1}>{portuguese ? "Em memória de Amadou Jallow" : "In Memory of Amadou Jallow"}</h1>

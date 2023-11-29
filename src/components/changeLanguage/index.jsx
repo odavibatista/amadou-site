@@ -5,11 +5,13 @@ import { useEffect, useState } from 'react'
 
 export default function ChangeLanguage()    {
     function getLanguage() {
-        if (localStorage.getItem('portuguese') === null) {
-            localStorage.setItem('portuguese', true)
+        if (typeof window !== 'undefined') {
+            if (localStorage.getItem('portuguese') === null) {
+                localStorage.setItem('portuguese', true)
+            }
+            return JSON.parse(localStorage.getItem('portuguese'))
         }
-        return JSON.parse(localStorage.getItem('portuguese'))
-}
+    }
 
     const portuguese = getLanguage()
 
