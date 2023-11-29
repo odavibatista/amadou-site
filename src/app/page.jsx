@@ -23,7 +23,6 @@ export default function Home() {
         <IndexHero/>
         <Carousel/>
       </Container>
-      <ChangeLanguage />
       <Footer/>
     </main>
   )
